@@ -19,7 +19,7 @@
     return NO;
 }
 
-- (BOOL)isTerminalUrl
+- (BOOL)isAppUrl
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
