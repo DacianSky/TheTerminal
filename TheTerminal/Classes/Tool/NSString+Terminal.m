@@ -8,9 +8,6 @@
 
 #import "NSString+Terminal.h"
 
-// 为你的app定义一个kTheMeProjectScheme的全局，用来区分命令的自定义前缀
-NSString * kTheMeProjectScheme = @"route";
-
 @implementation NSString (Terminal)
 
 - (BOOL)hasContainString:(NSString *)string
@@ -22,11 +19,14 @@ NSString * kTheMeProjectScheme = @"route";
     return NO;
 }
 
-- (BOOL)isNativeUrl
+- (BOOL)isTerminalUrl
 {
-    if ([self supportScheme:kTheMeProjectScheme]) {
-        return YES;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    if ([self respondsToSelector:@selector(isTheRouteUrl)]) {
+        return [self performSelector:@selector(isTheRouteUrl)];
     }
+#pragma clang diagnostic pop
     return NO;
 }
 

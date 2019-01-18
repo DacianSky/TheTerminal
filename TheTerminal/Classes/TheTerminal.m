@@ -82,7 +82,7 @@ static TheTerminal *_instance;
 #pragma mark - execute
 - (BOOL)couldParse:(NSString *)commandString
 {
-    if (![commandString supportScheme:kTheMeScheme] && ![commandString isNativeUrl]) {
+    if (![commandString supportScheme:kTheMeScheme] && ![commandString isTerminalUrl]) {
         return NO;
     }
     commandString = [[self class] specialHandle:commandString];
@@ -121,7 +121,7 @@ static TheTerminal *_instance;
 
 + (NSString *)specialHandle:(NSString *)commandString
 {
-    if ([commandString isNativeUrl]) {
+    if ([commandString isTerminalUrl]) {
         // 原生scheme配合路由命令使用
         commandString = [NSString stringWithFormat:@"thou://route?url=@[%@]",commandString];
     }

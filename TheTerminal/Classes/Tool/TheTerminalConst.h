@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 #define cmd__ [TheTerminal sharedTerminal]
+
+// 执行命令
 void __executeCommand(NSString *cmd);
 
 // 开启后才会输出日志，然后根据命令来确定日志输出重定向位置

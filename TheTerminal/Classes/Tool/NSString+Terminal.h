@@ -19,7 +19,7 @@ id themeTerminalJson(NSString *fileName);
 
 - (BOOL)hasContainString:(NSString *)string;
 
-- (BOOL)isNativeUrl;
+- (BOOL)isTerminalUrl;
 - (BOOL)supportScheme:(NSString *)scheme;
 
 /*
