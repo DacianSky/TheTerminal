@@ -1,0 +1,834 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03A9F34AF4CF99CF918FBF36D5C96AB4 /* TheTerminal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FA6D233731FFD6654556C867E85F14B2 /* TheTerminal.bundle */; };
+		0E841A590FE6FE4E8E600383DDBBCE4A /* TheCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = D8D5254ABB6078E79ED11ABAA3621AFB /* TheCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22394388E527F495B986D7B2585EBABD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		3AA63754F8FB668ECE2610E3ABF8F842 /* TheRevealCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC3BE7DEC641FF1B1475FA8469DD16 /* TheRevealCommand.m */; };
+		3B5C90EB4F23254F32E02E9D01C1CF80 /* TheTerminal.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C74D6956C5B817F6EB34D578213090 /* TheTerminal.m */; };
+		3F3156B309E3AF526BF7881732109C52 /* TheTerminal-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FAFDF07C924FC169DD4169AFD5D07B7 /* TheTerminal-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48F1EA9734D9BA4288F6C62415C62E1E /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6715C39095FD0F29A615E28A128A7A /* icon_close.png */; };
+		4C72DB9638C45CBCDF28285D1EAC6DE0 /* TheNotifyCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4CB28E8357166BD657BBACE410E63 /* TheNotifyCommand.m */; };
+		58193B941E6CCFCF165441177582A65C /* TheExitCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = DF18816D7C6FF1D1F9304C4FD8146FC3 /* TheExitCommand.m */; };
+		5B4FFAADA9D9C350837263A77ACD0F2B /* TheRevealCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 0839723A3B560BFD403766C1145D5832 /* TheRevealCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		624FCD00D2516B4DE8532A20677AAC73 /* TheAlertCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = AC629697C659316AAA2D6E5DBA9DB6AE /* TheAlertCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6469530831A5847F9668C5B45A8402D5 /* TheTerminalView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7E19D29480FF96D62033A982125C52 /* TheTerminalView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		671FBA068C34C078F92B53F9B7105B6F /* TheAlertCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C323AD7FDE23036525DF7AC6C82A9DA /* TheAlertCommand.m */; };
+		683B296A67BB9ACA2B7C55C4457DA47E /* TheTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC93A67BCFDF6D42167CB5328ADB2 /* TheTextView.m */; };
+		69F5AA665FE9F3600A7233EE6024A7C4 /* TheTerminal-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1B001D7AB65A9040F2406480BD380 /* TheTerminal-dummy.m */; };
+		6AF9C413A8EC88516ECB8CD73ADC0EE9 /* TheLogCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 472115EDBD0F74FD0DC8A9C069F52EB8 /* TheLogCommand.m */; };
+		6BEA789A49F065492BEBE83A999CAEF5 /* TheRouteCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C1D8E8E0D7E8903AFCF880369DF3B606 /* TheRouteCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F77B6D7811FB4E1627EADDF191CF17C /* Pods-TheTerminalDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D139A71D212AAE417896F1507F28908 /* Pods-TheTerminalDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70A68FA554C9ACDE63E42CAF597E990F /* TheTerminalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3FA0B10DA35EAE7792509E1599C56F /* TheTerminalView.m */; };
+		739CF119D091A4F7C2955A5E652127E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		7A8A42B7F9A2F420DC3478CBE344212A /* TheListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E417D6EC251F84C7F161C2F2362B50 /* TheListView.m */; };
+		7E12DD61E7F1AE6B3BD4AF0C35C3DF8C /* TheLogCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D7CFE3B9D294DBFBA04514F19D0AB0 /* TheLogCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89C84060B9003E89FAECA8C367D4FC7D /* TheListView.h in Headers */ = {isa = PBXBuildFile; fileRef = FD6E5B9114D1581FA6701F5338A0DD24 /* TheListView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92F8569BE5008C157EF6C59DB2635A8D /* Pods-TheTerminalDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B5650DFE943C9F3697DD965EF96FBD26 /* Pods-TheTerminalDemo-dummy.m */; };
+		AF5116E1798D6FBA01F508CD8DC870E0 /* refresh_command.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1024B0A3AD62642AFB0B2C7FC83329 /* refresh_command.png */; };
+		B78F01A4414F98C2053DE560C805C6AF /* TheTerminalConst.h in Headers */ = {isa = PBXBuildFile; fileRef = F0A4629FC7AAF84F7B3C9142132BDC8F /* TheTerminalConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAC20EF97BE5F77B97EDE0469C7FB5B9 /* TheRouteCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F765B8B937E6146EF094BED9201BA0 /* TheRouteCommand.m */; };
+		BEFE4BC5280D5E3D6FF4BF87E5F7301D /* TheTerminal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9123D5186E5A351B4E6592C76F0E555C /* TheTerminal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE7801E0EA4DBE406085422B7544C25B /* NSString+Terminal.h in Headers */ = {isa = PBXBuildFile; fileRef = E7D9B5C2FD80221E4462428516086DE5 /* NSString+Terminal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D642E6373C9723D619CA0CEA306EEE19 /* TheCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = D618D4715FFC09AA471B4760DDF8AD36 /* TheCommand.m */; };
+		D8A8CCAD6885B5FA8A9B771CC04442CA /* NSString+Terminal.m in Sources */ = {isa = PBXBuildFile; fileRef = 518811678F33B3D4D51EBFDADD6C5277 /* NSString+Terminal.m */; };
+		EA946662F29392BF9E785EF6EBA9FA11 /* TheNotifyCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EDA7DCC69C96F588A8D811B99324A0E /* TheNotifyCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F80BBC895BD4F223DE7B14448F16830E /* TheTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 55E8935AA74183F1E4C7AF688BED0097 /* TheTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA8FF8CF22B11BDC448DE7D554C8A227 /* command.py in Resources */ = {isa = PBXBuildFile; fileRef = 50A19B9CC9C1D067643B368E0645B044 /* command.py */; };
+		FE3379539022073E59FB9200E6D44D70 /* TheExitCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D3214D5F48473867FB1B883140BECC2 /* TheExitCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E72E6A4FA5D15B4F60530D890F3EA87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9DEA2846BF38C1A75C36F6CA1F96099;
+			remoteInfo = "TheTerminal-TheTerminal";
+		};
+		AD99F43569F4473F24E4F101866AB1C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E359BF566444BEFFDB7DA69B751A13F0;
+			remoteInfo = TheTerminal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02CBC93A67BCFDF6D42167CB5328ADB2 /* TheTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheTextView.m; sourceTree = "<group>"; };
+		0839723A3B560BFD403766C1145D5832 /* TheRevealCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TheRevealCommand.h; path = TheTerminal/Classes/TheRevealCommand.h; sourceTree = "<group>"; };
+		0C323AD7FDE23036525DF7AC6C82A9DA /* TheAlertCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TheAlertCommand.m; path = TheTerminal/Classes/TheAlertCommand.m; sourceTree = "<group>"; };
+		0CDC78862B1CF9402F59CBFC391D25BB /* Pods_TheTerminalDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TheTerminalDemo.framework; path = "Pods-TheTerminalDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B5044FBB1817D85A616EB64AA108F05 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D139A71D212AAE417896F1507F28908 /* Pods-TheTerminalDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TheTerminalDemo-umbrella.h"; sourceTree = "<group>"; };
+		1DF1B001D7AB65A9040F2406480BD380 /* TheTerminal-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TheTerminal-dummy.m"; sourceTree = "<group>"; };
+		1E7C02FDCF651E9C105C373990D7DCAA /* Pods-TheTerminalDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TheTerminalDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		1E7E19D29480FF96D62033A982125C52 /* TheTerminalView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheTerminalView.h; sourceTree = "<group>"; };
+		1EDA7DCC69C96F588A8D811B99324A0E /* TheNotifyCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TheNotifyCommand.h; path = TheTerminal/Classes/TheNotifyCommand.h; sourceTree = "<group>"; };
+		29C74D6956C5B817F6EB34D578213090 /* TheTerminal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TheTerminal.m; path = TheTerminal/Classes/TheTerminal.m; sourceTree = "<group>"; };
+		316D584491EC93C694CF6FB38E04798E /* TheTerminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TheTerminal.framework; path = TheTerminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32D7CFE3B9D294DBFBA04514F19D0AB0 /* TheLogCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TheLogCommand.h; path = TheTerminal/Classes/TheLogCommand.h; sourceTree = "<group>"; };
+		3DFC3BE7DEC641FF1B1475FA8469DD16 /* TheRevealCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TheRevealCommand.m; path = TheTerminal/Classes/TheRevealCommand.m; sourceTree = "<group>"; };
+		472115EDBD0F74FD0DC8A9C069F52EB8 /* TheLogCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TheLogCommand.m; path = TheTerminal/Classes/TheLogCommand.m; sourceTree = "<group>"; };
+		4962B9AF7384B1D485D20A33D317F891 /* Pods-TheTerminalDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TheTerminalDemo-frameworks.sh"; sourceTree = "<group>"; };
+		4C3FA0B10DA35EAE7792509E1599C56F /* TheTerminalView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheTerminalView.m; sourceTree = "<group>"; };
+		4F0D4991F2862AE06A23567AE40FBB9E /* TheTerminal.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = TheTerminal.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		50A19B9CC9C1D067643B368E0645B044 /* command.py */ = {isa = PBXFileReference; includeInIndex = 1; name = command.py; path = TheTerminal/Assets/command.py; sourceTree = "<group>"; };
+		50E417D6EC251F84C7F161C2F2362B50 /* TheListView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TheListView.m; sourceTree = "<group>"; };
+		518811678F33B3D4D51EBFDADD6C5277 /* NSString+Terminal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+Terminal.m"; sourceTree = "<group>"; };
+		55E8935AA74183F1E4C7AF688BED0097 /* TheTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheTextView.h; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5A6715C39095FD0F29A615E28A128A7A /* icon_close.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = icon_close.png; path = TheTerminal/Assets/icon_close.png; sourceTree = "<group>"; };
+		5D3214D5F48473867FB1B883140BECC2 /* TheExitCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TheExitCommand.h; path = TheTerminal/Classes/TheExitCommand.h; sourceTree = "<group>"; };
+		5FAFDF07C924FC169DD4169AFD5D07B7 /* TheTerminal-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TheTerminal-umbrella.h"; sourceTree = "<group>"; };
+		773F0C37D0CA3E0D126E49E4234C28C1 /* Pods-TheTerminalDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TheTerminalDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7DE4CB28E8357166BD657BBACE410E63 /* TheNotifyCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TheNotifyCommand.m; path = TheTerminal/Classes/TheNotifyCommand.m; sourceTree = "<group>"; };
+		8D3078B43399AD95E7A30187D487DD82 /* Pods-TheTerminalDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TheTerminalDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9123D5186E5A351B4E6592C76F0E555C /* TheTerminal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TheTerminal.h; path = TheTerminal/Classes/TheTerminal.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AC629697C659316AAA2D6E5DBA9DB6AE /* TheAlertCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TheAlertCommand.h; path = TheTerminal/Classes/TheAlertCommand.h; sourceTree = "<group>"; };
+		B1C036A3CD4F3B007B078C3008C01424 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		B5650DFE943C9F3697DD965EF96FBD26 /* Pods-TheTerminalDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TheTerminalDemo-dummy.m"; sourceTree = "<group>"; };
+		B61A5701DC53A9D6CFB57763835496A0 /* Pods-TheTerminalDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TheTerminalDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		BCF278DBF14033B4793A4CA0334D5336 /* ResourceBundle-TheTerminal-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TheTerminal-Info.plist"; sourceTree = "<group>"; };
+		C1D8E8E0D7E8903AFCF880369DF3B606 /* TheRouteCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TheRouteCommand.h; path = TheTerminal/Classes/TheRouteCommand.h; sourceTree = "<group>"; };
+		D5D1D735718E2A56AED33C7FAD7EA8EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D618D4715FFC09AA471B4760DDF8AD36 /* TheCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TheCommand.m; path = TheTerminal/Classes/TheCommand.m; sourceTree = "<group>"; };
+		D8D5254ABB6078E79ED11ABAA3621AFB /* TheCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TheCommand.h; path = TheTerminal/Classes/TheCommand.h; sourceTree = "<group>"; };
+		DC1024B0A3AD62642AFB0B2C7FC83329 /* refresh_command.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = refresh_command.png; path = TheTerminal/Assets/refresh_command.png; sourceTree = "<group>"; };
+		DF18816D7C6FF1D1F9304C4FD8146FC3 /* TheExitCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TheExitCommand.m; path = TheTerminal/Classes/TheExitCommand.m; sourceTree = "<group>"; };
+		E08041DB5067E8D3F1D5E9B4E9231032 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E42B2C36A1879934DB29D1891B7B0578 /* Pods-TheTerminalDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TheTerminalDemo-resources.sh"; sourceTree = "<group>"; };
+		E7D9B5C2FD80221E4462428516086DE5 /* NSString+Terminal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+Terminal.h"; sourceTree = "<group>"; };
+		EF4A1C4317B0D4A127417D23816D1B41 /* TheTerminal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TheTerminal.xcconfig; sourceTree = "<group>"; };
+		F0A4629FC7AAF84F7B3C9142132BDC8F /* TheTerminalConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheTerminalConst.h; sourceTree = "<group>"; };
+		F6F765B8B937E6146EF094BED9201BA0 /* TheRouteCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TheRouteCommand.m; path = TheTerminal/Classes/TheRouteCommand.m; sourceTree = "<group>"; };
+		F7FA1F6DA5C73A71B14135A61938A912 /* TheTerminal-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TheTerminal-prefix.pch"; sourceTree = "<group>"; };
+		FA6D233731FFD6654556C867E85F14B2 /* TheTerminal.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TheTerminal.bundle; path = "TheTerminal-TheTerminal.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC66B2FEF96E866232D507EE87E0D65D /* TheTerminal.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TheTerminal.modulemap; sourceTree = "<group>"; };
+		FCB6FC9E1D6B042B700BA7F69B2E9CB4 /* Pods-TheTerminalDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TheTerminalDemo.modulemap"; sourceTree = "<group>"; };
+		FD6E5B9114D1581FA6701F5338A0DD24 /* TheListView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TheListView.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C205A5B7ECC3F039CA97450648FDBAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				739CF119D091A4F7C2955A5E652127E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D6CF9C301983E10A4F1A032323FB89D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844D40757E9B1CA95CCFB5DFAB3B80AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22394388E527F495B986D7B2585EBABD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AB7F0661575EC6CC8065A4D054BEBA4 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CF605F8CC529B3E5B6476A7CA741101 /* TheTerminal */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		15BB4EE99E96FBA11A67EA73E72C4289 /* Pods-TheTerminalDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D5D1D735718E2A56AED33C7FAD7EA8EF /* Info.plist */,
+				FCB6FC9E1D6B042B700BA7F69B2E9CB4 /* Pods-TheTerminalDemo.modulemap */,
+				773F0C37D0CA3E0D126E49E4234C28C1 /* Pods-TheTerminalDemo-acknowledgements.markdown */,
+				B61A5701DC53A9D6CFB57763835496A0 /* Pods-TheTerminalDemo-acknowledgements.plist */,
+				B5650DFE943C9F3697DD965EF96FBD26 /* Pods-TheTerminalDemo-dummy.m */,
+				4962B9AF7384B1D485D20A33D317F891 /* Pods-TheTerminalDemo-frameworks.sh */,
+				E42B2C36A1879934DB29D1891B7B0578 /* Pods-TheTerminalDemo-resources.sh */,
+				1D139A71D212AAE417896F1507F28908 /* Pods-TheTerminalDemo-umbrella.h */,
+				1E7C02FDCF651E9C105C373990D7DCAA /* Pods-TheTerminalDemo.debug.xcconfig */,
+				8D3078B43399AD95E7A30187D487DD82 /* Pods-TheTerminalDemo.release.xcconfig */,
+			);
+			name = "Pods-TheTerminalDemo";
+			path = "Target Support Files/Pods-TheTerminalDemo";
+			sourceTree = "<group>";
+		};
+		4CF605F8CC529B3E5B6476A7CA741101 /* TheTerminal */ = {
+			isa = PBXGroup;
+			children = (
+				AC629697C659316AAA2D6E5DBA9DB6AE /* TheAlertCommand.h */,
+				0C323AD7FDE23036525DF7AC6C82A9DA /* TheAlertCommand.m */,
+				D8D5254ABB6078E79ED11ABAA3621AFB /* TheCommand.h */,
+				D618D4715FFC09AA471B4760DDF8AD36 /* TheCommand.m */,
+				5D3214D5F48473867FB1B883140BECC2 /* TheExitCommand.h */,
+				DF18816D7C6FF1D1F9304C4FD8146FC3 /* TheExitCommand.m */,
+				32D7CFE3B9D294DBFBA04514F19D0AB0 /* TheLogCommand.h */,
+				472115EDBD0F74FD0DC8A9C069F52EB8 /* TheLogCommand.m */,
+				1EDA7DCC69C96F588A8D811B99324A0E /* TheNotifyCommand.h */,
+				7DE4CB28E8357166BD657BBACE410E63 /* TheNotifyCommand.m */,
+				0839723A3B560BFD403766C1145D5832 /* TheRevealCommand.h */,
+				3DFC3BE7DEC641FF1B1475FA8469DD16 /* TheRevealCommand.m */,
+				C1D8E8E0D7E8903AFCF880369DF3B606 /* TheRouteCommand.h */,
+				F6F765B8B937E6146EF094BED9201BA0 /* TheRouteCommand.m */,
+				9123D5186E5A351B4E6592C76F0E555C /* TheTerminal.h */,
+				29C74D6956C5B817F6EB34D578213090 /* TheTerminal.m */,
+				8B98A5A505561D2C0C46312F289C8BD8 /* Pod */,
+				66A1E727F37F1A78006F9FE60AACF685 /* Resources */,
+				9FAAE2BDA74FD6970972903DDB19AFE7 /* Support Files */,
+				B9BF5090DFA161D716136BCC179D7A98 /* Tool */,
+				6125C99F68D10BB5C1102D8A6A2E71E1 /* View */,
+			);
+			name = TheTerminal;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6125C99F68D10BB5C1102D8A6A2E71E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD6E5B9114D1581FA6701F5338A0DD24 /* TheListView.h */,
+				50E417D6EC251F84C7F161C2F2362B50 /* TheListView.m */,
+				1E7E19D29480FF96D62033A982125C52 /* TheTerminalView.h */,
+				4C3FA0B10DA35EAE7792509E1599C56F /* TheTerminalView.m */,
+				55E8935AA74183F1E4C7AF688BED0097 /* TheTextView.h */,
+				02CBC93A67BCFDF6D42167CB5328ADB2 /* TheTextView.m */,
+			);
+			name = View;
+			path = TheTerminal/Classes/View;
+			sourceTree = "<group>";
+		};
+		66A1E727F37F1A78006F9FE60AACF685 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50A19B9CC9C1D067643B368E0645B044 /* command.py */,
+				5A6715C39095FD0F29A615E28A128A7A /* icon_close.png */,
+				DC1024B0A3AD62642AFB0B2C7FC83329 /* refresh_command.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				0AB7F0661575EC6CC8065A4D054BEBA4 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				906F23EFC8AE83F7EB05B75703CA0202 /* Products */,
+				A0C19F441CF5F177AE4DE8B6821DA432 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8B98A5A505561D2C0C46312F289C8BD8 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E08041DB5067E8D3F1D5E9B4E9231032 /* LICENSE */,
+				B1C036A3CD4F3B007B078C3008C01424 /* README.md */,
+				4F0D4991F2862AE06A23567AE40FBB9E /* TheTerminal.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		906F23EFC8AE83F7EB05B75703CA0202 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CDC78862B1CF9402F59CBFC391D25BB /* Pods_TheTerminalDemo.framework */,
+				FA6D233731FFD6654556C867E85F14B2 /* TheTerminal.bundle */,
+				316D584491EC93C694CF6FB38E04798E /* TheTerminal.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FAAE2BDA74FD6970972903DDB19AFE7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B5044FBB1817D85A616EB64AA108F05 /* Info.plist */,
+				BCF278DBF14033B4793A4CA0334D5336 /* ResourceBundle-TheTerminal-Info.plist */,
+				FC66B2FEF96E866232D507EE87E0D65D /* TheTerminal.modulemap */,
+				EF4A1C4317B0D4A127417D23816D1B41 /* TheTerminal.xcconfig */,
+				1DF1B001D7AB65A9040F2406480BD380 /* TheTerminal-dummy.m */,
+				F7FA1F6DA5C73A71B14135A61938A912 /* TheTerminal-prefix.pch */,
+				5FAFDF07C924FC169DD4169AFD5D07B7 /* TheTerminal-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TheTerminal";
+			sourceTree = "<group>";
+		};
+		A0C19F441CF5F177AE4DE8B6821DA432 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				15BB4EE99E96FBA11A67EA73E72C4289 /* Pods-TheTerminalDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B9BF5090DFA161D716136BCC179D7A98 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E7D9B5C2FD80221E4462428516086DE5 /* NSString+Terminal.h */,
+				518811678F33B3D4D51EBFDADD6C5277 /* NSString+Terminal.m */,
+				F0A4629FC7AAF84F7B3C9142132BDC8F /* TheTerminalConst.h */,
+			);
+			name = Tool;
+			path = TheTerminal/Classes/Tool;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		92E395F0BB3B67301A7A36AFD25BF228 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F77B6D7811FB4E1627EADDF191CF17C /* Pods-TheTerminalDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4EA6A227809952C7F6E75C31A52158 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7801E0EA4DBE406085422B7544C25B /* NSString+Terminal.h in Headers */,
+				624FCD00D2516B4DE8532A20677AAC73 /* TheAlertCommand.h in Headers */,
+				0E841A590FE6FE4E8E600383DDBBCE4A /* TheCommand.h in Headers */,
+				FE3379539022073E59FB9200E6D44D70 /* TheExitCommand.h in Headers */,
+				89C84060B9003E89FAECA8C367D4FC7D /* TheListView.h in Headers */,
+				7E12DD61E7F1AE6B3BD4AF0C35C3DF8C /* TheLogCommand.h in Headers */,
+				EA946662F29392BF9E785EF6EBA9FA11 /* TheNotifyCommand.h in Headers */,
+				5B4FFAADA9D9C350837263A77ACD0F2B /* TheRevealCommand.h in Headers */,
+				6BEA789A49F065492BEBE83A999CAEF5 /* TheRouteCommand.h in Headers */,
+				3F3156B309E3AF526BF7881732109C52 /* TheTerminal-umbrella.h in Headers */,
+				BEFE4BC5280D5E3D6FF4BF87E5F7301D /* TheTerminal.h in Headers */,
+				B78F01A4414F98C2053DE560C805C6AF /* TheTerminalConst.h in Headers */,
+				6469530831A5847F9668C5B45A8402D5 /* TheTerminalView.h in Headers */,
+				F80BBC895BD4F223DE7B14448F16830E /* TheTextView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		50AB4D811B07AFCCB9E20875C9D2AE5A /* Pods-TheTerminalDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD46705F810A155A1D4BBC38DE26C9BD /* Build configuration list for PBXNativeTarget "Pods-TheTerminalDemo" */;
+			buildPhases = (
+				92E395F0BB3B67301A7A36AFD25BF228 /* Headers */,
+				89AAECF08807DB7A0FA713BE426BB983 /* Sources */,
+				844D40757E9B1CA95CCFB5DFAB3B80AF /* Frameworks */,
+				41572951D2B2D14D4044FDFE3FFB27D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96ECE4D772FC48D02B1C1ABE9EAA98FB /* PBXTargetDependency */,
+			);
+			name = "Pods-TheTerminalDemo";
+			productName = "Pods-TheTerminalDemo";
+			productReference = 0CDC78862B1CF9402F59CBFC391D25BB /* Pods_TheTerminalDemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E359BF566444BEFFDB7DA69B751A13F0 /* TheTerminal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC64394FD0ACF4D39E1ADC306A351B8B /* Build configuration list for PBXNativeTarget "TheTerminal" */;
+			buildPhases = (
+				ED4EA6A227809952C7F6E75C31A52158 /* Headers */,
+				34E6FE87B0D1E0C3B4AF55CBF8C3D842 /* Sources */,
+				0C205A5B7ECC3F039CA97450648FDBAB /* Frameworks */,
+				AF468C79AF96F5A3B487CDB7C4BCC698 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4D2FE62088A74F53CE458B96B502396 /* PBXTargetDependency */,
+			);
+			name = TheTerminal;
+			productName = TheTerminal;
+			productReference = 316D584491EC93C694CF6FB38E04798E /* TheTerminal.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F9DEA2846BF38C1A75C36F6CA1F96099 /* TheTerminal-TheTerminal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CAFC44B7959B97A96AEADC58C1C4FF8 /* Build configuration list for PBXNativeTarget "TheTerminal-TheTerminal" */;
+			buildPhases = (
+				0537D37E67DE7A0C79692CBA709F5641 /* Sources */,
+				7D6CF9C301983E10A4F1A032323FB89D /* Frameworks */,
+				F41B20C8A21CE5E84EF77CA312EAC972 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TheTerminal-TheTerminal";
+			productName = "TheTerminal-TheTerminal";
+			productReference = FA6D233731FFD6654556C867E85F14B2 /* TheTerminal.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 906F23EFC8AE83F7EB05B75703CA0202 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50AB4D811B07AFCCB9E20875C9D2AE5A /* Pods-TheTerminalDemo */,
+				E359BF566444BEFFDB7DA69B751A13F0 /* TheTerminal */,
+				F9DEA2846BF38C1A75C36F6CA1F96099 /* TheTerminal-TheTerminal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41572951D2B2D14D4044FDFE3FFB27D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF468C79AF96F5A3B487CDB7C4BCC698 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03A9F34AF4CF99CF918FBF36D5C96AB4 /* TheTerminal.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F41B20C8A21CE5E84EF77CA312EAC972 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA8FF8CF22B11BDC448DE7D554C8A227 /* command.py in Resources */,
+				48F1EA9734D9BA4288F6C62415C62E1E /* icon_close.png in Resources */,
+				AF5116E1798D6FBA01F508CD8DC870E0 /* refresh_command.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0537D37E67DE7A0C79692CBA709F5641 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34E6FE87B0D1E0C3B4AF55CBF8C3D842 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8A8CCAD6885B5FA8A9B771CC04442CA /* NSString+Terminal.m in Sources */,
+				671FBA068C34C078F92B53F9B7105B6F /* TheAlertCommand.m in Sources */,
+				D642E6373C9723D619CA0CEA306EEE19 /* TheCommand.m in Sources */,
+				58193B941E6CCFCF165441177582A65C /* TheExitCommand.m in Sources */,
+				7A8A42B7F9A2F420DC3478CBE344212A /* TheListView.m in Sources */,
+				6AF9C413A8EC88516ECB8CD73ADC0EE9 /* TheLogCommand.m in Sources */,
+				4C72DB9638C45CBCDF28285D1EAC6DE0 /* TheNotifyCommand.m in Sources */,
+				3AA63754F8FB668ECE2610E3ABF8F842 /* TheRevealCommand.m in Sources */,
+				BAC20EF97BE5F77B97EDE0469C7FB5B9 /* TheRouteCommand.m in Sources */,
+				69F5AA665FE9F3600A7233EE6024A7C4 /* TheTerminal-dummy.m in Sources */,
+				3B5C90EB4F23254F32E02E9D01C1CF80 /* TheTerminal.m in Sources */,
+				70A68FA554C9ACDE63E42CAF597E990F /* TheTerminalView.m in Sources */,
+				683B296A67BB9ACA2B7C55C4457DA47E /* TheTextView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89AAECF08807DB7A0FA713BE426BB983 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92F8569BE5008C157EF6C59DB2635A8D /* Pods-TheTerminalDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96ECE4D772FC48D02B1C1ABE9EAA98FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TheTerminal;
+			target = E359BF566444BEFFDB7DA69B751A13F0 /* TheTerminal */;
+			targetProxy = AD99F43569F4473F24E4F101866AB1C8 /* PBXContainerItemProxy */;
+		};
+		A4D2FE62088A74F53CE458B96B502396 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "TheTerminal-TheTerminal";
+			target = F9DEA2846BF38C1A75C36F6CA1F96099 /* TheTerminal-TheTerminal */;
+			targetProxy = 3E72E6A4FA5D15B4F60530D890F3EA87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A31051CFB3800EF57B309BE42420D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E7C02FDCF651E9C105C373990D7DCAA /* Pods-TheTerminalDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TheTerminalDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TheTerminalDemo/Pods-TheTerminalDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		40B45BB3CF3EE4476259302A7FAAD78F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		62CA1167A0BA24B7F6095C1F0E542F7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D3078B43399AD95E7A30187D487DD82 /* Pods-TheTerminalDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TheTerminalDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TheTerminalDemo/Pods-TheTerminalDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		715F7FCAF1500A6302E3EA34F7172E85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF4A1C4317B0D4A127417D23816D1B41 /* TheTerminal.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TheTerminal/TheTerminal-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TheTerminal/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TheTerminal/TheTerminal.modulemap";
+				PRODUCT_MODULE_NAME = TheTerminal;
+				PRODUCT_NAME = TheTerminal;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		85ED3013A635C27F8B7FAF51362B108C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		95037E2220EA572AF5922AF9B594C832 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF4A1C4317B0D4A127417D23816D1B41 /* TheTerminal.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TheTerminal";
+				INFOPLIST_FILE = "Target Support Files/TheTerminal/ResourceBundle-TheTerminal-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = TheTerminal;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		BDC3BA47086F3DA8A96FD18941AF7FD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF4A1C4317B0D4A127417D23816D1B41 /* TheTerminal.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TheTerminal";
+				INFOPLIST_FILE = "Target Support Files/TheTerminal/ResourceBundle-TheTerminal-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = TheTerminal;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		D1027A20864D114228619FDEFE51655A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF4A1C4317B0D4A127417D23816D1B41 /* TheTerminal.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TheTerminal/TheTerminal-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TheTerminal/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TheTerminal/TheTerminal.modulemap";
+				PRODUCT_MODULE_NAME = TheTerminal;
+				PRODUCT_NAME = TheTerminal;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85ED3013A635C27F8B7FAF51362B108C /* Debug */,
+				40B45BB3CF3EE4476259302A7FAAD78F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CAFC44B7959B97A96AEADC58C1C4FF8 /* Build configuration list for PBXNativeTarget "TheTerminal-TheTerminal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDC3BA47086F3DA8A96FD18941AF7FD4 /* Debug */,
+				95037E2220EA572AF5922AF9B594C832 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC64394FD0ACF4D39E1ADC306A351B8B /* Build configuration list for PBXNativeTarget "TheTerminal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1027A20864D114228619FDEFE51655A /* Debug */,
+				715F7FCAF1500A6302E3EA34F7172E85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD46705F810A155A1D4BBC38DE26C9BD /* Build configuration list for PBXNativeTarget "Pods-TheTerminalDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A31051CFB3800EF57B309BE42420D9D /* Debug */,
+				62CA1167A0BA24B7F6095C1F0E542F7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

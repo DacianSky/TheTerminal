@@ -1,0 +1,6 @@
+framework module TheTerminal {
+  umbrella header "TheTerminal-umbrella.h"
+
+  export *
+  module * { export * }
+}

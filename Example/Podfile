@@ -1,0 +1,6 @@
+use_frameworks!
+target 'TheTerminalDemo' do
+  pod 'TheTerminal', :path => '../'
+  
+  
+end
