@@ -17,17 +17,22 @@ void __executeCommand(NSString *cmd)
         cmd = nsstrformatcat(@"%@://%@", kTheMeScheme,cmd);
     }
     TheLog(@"command: %@",cmd);
-    if ([cmd__ couldParse:cmd] ) {
-        [cmd__ parse:cmd];
-    }
+    [theTerminal_ fire:cmd];
+}
+
+void __executeCommandOnly(NSString *cmd)
+{
+    __executeCommand(nsstrformatcat(@"thou://terminal?cmd=@[%@]",cmd));
+}
+
+void __executeAlert(NSString *msg)
+{
+    __executeCommandOnly(nsstrformatcat(@"alert?msg=%@",msg));
 }
 
 #define kCmdHistoryLimitCount 15
 
 @interface TheTerminal()
-{
-    TheCommand *_thecmd;
-}
 
 @property (nonatomic,strong) NSMutableArray *cmdHistory;
 @property (nonatomic,strong) NSMutableArray *allCommands;
@@ -67,37 +72,42 @@ static TheTerminal *_instance;
 - (void)execute
 {
     if ([self havaParam:@"last"]) {
-        NSInteger last = [self.params[@"last"] integerValue];
-        if (last<=0 || last > self.cmdHistory.count) {
-            __executeCommand(@"alert?msg=超出历史记录范围");
+        NSInteger count = self.cmdHistory.count - [self.params[@"last"] integerValue];
+        if (count<0 || count >= self.cmdHistory.count) {
+            __executeAlert(@"超出历史记录范围");
             return;
         }
-        NSInteger count = self.cmdHistory.count - last;
-        if (last>=0) {
-            __executeCommand(self.cmdHistory[count]);
-        }
+        __executeCommand(self.cmdHistory[count]);
+    }else if ([self havaParam:@"cmd"]) {
+        // not record history parse cmd like @"thou://terminal?cmd=@[alert?title=ThisTitle&msg=ThisMsg]"
+        NSString *cmd = [self.params[@"cmd"] stringByDecodingURLFormat];
+        __executeCommand(cmd);
+        [self.cmdHistory removeLastObject];
     }
 }
 
 #pragma mark - execute
-- (BOOL)couldParse:(NSString *)commandString
+- (void)fire:(NSString *)cmd
 {
-    if (![commandString supportScheme:kTheMeScheme] && ![commandString isAppUrl]) {
-        return NO;
-    }
-    commandString = [[self class] specialHandle:commandString];
-    _thecmd = [[self class] findCommand:commandString];
-    return (BOOL)_thecmd;
+    TheCommand *thecmd = [self couldParse:cmd];
+    [self parse:thecmd];
+    [self putHistory:thecmd.command];
 }
 
-- (void)parse:(NSString *)commandString
+- (TheCommand *)couldParse:(NSString *)cmd
 {
-    if (!_thecmd) {
+    if (![cmd supportScheme:kTheMeScheme] && ![cmd isAppUrl]) {
+        return nil;
+    }
+    return [[self class] findCommand:[[self class] specialHandle:cmd]];
+}
+
+- (void)parse:(TheCommand *)thecmd
+{
+    if (!thecmd) {
         return;
     }
-    [_thecmd execute];
-    [self putHistory:_thecmd.command];
-    _thecmd = nil;
+    [thecmd execute];
 }
 
 #pragma mark - tool
@@ -136,7 +146,7 @@ static TheTerminal *_instance;
 
 + (NSArray<NSString *> *)allCommands
 {
-    return cmd__.allCommands;
+    return theTerminal_.allCommands;
 }
 
 - (void)putHistory:(NSString *)history
