@@ -56,17 +56,17 @@
     return false;
 }
 
-- (NSString *)stringByDecodingURLFormat
+- (NSString *)urldecode
 {
     NSString *result = [(NSString *)self stringByReplacingOccurrencesOfString:@"+" withString:@" "];
     result = [result stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     return result;
 }
 
-- (NSString *)URLEncodedString
+- (NSString *)urlencode
 {
     NSString *unencodedString = self;
-    NSString *encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)unencodedString,(CFStringRef)@"!*'();:@&=+$,/?%#[]",NULL,kCFStringEncodingUTF8));
+    NSString *encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)unencodedString,NULL,(CFStringRef)@"!*'();:@&=+$,/?%#[]",kCFStringEncodingUTF8));
     
     return encodedString;
 }
@@ -95,7 +95,7 @@
                 contentRange.length -= 3;
                 NSString *content = [url substringWithRange:contentRange];
                 
-                NSString *encodeContent = [content URLEncodedString];
+                NSString *encodeContent = [content urlencode];
                 
                 resultUrl = [resultUrl stringByReplacingCharactersInRange:resultRange withString:encodeContent];
             }
@@ -126,7 +126,7 @@
         NSArray *paramKV = [paramStr componentsSeparatedByString:@"="];
         if (paramKV.count == 2) {
             NSString *key = [paramKV firstObject];
-            NSString *value = [[paramKV lastObject] stringByDecodingURLFormat];
+            NSString *value = [[paramKV lastObject] urldecode];
             if ([NSString isNotEmptyAndNull:key] && [NSString isNotEmptyAndNull:value]) {
                 id dictValue = paramDict[key];
                 if ([dictValue isKindOfClass:[NSString class]]) {

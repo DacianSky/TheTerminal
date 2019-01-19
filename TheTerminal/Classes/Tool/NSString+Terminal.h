@@ -30,8 +30,8 @@ id themeTerminalJson(NSString *fileName);
 + (BOOL)isEmptyOrNull: (NSString *)string;
 + (BOOL)isNotEmptyAndNull: (NSString *)string;
 
-- (NSString *)stringByDecodingURLFormat;
-- (NSString *)URLEncodedString;
+- (NSString *)urldecode;
+- (NSString *)urlencode;
 
 - (NSArray<NSString *> *)getAllParameter;
 - (NSDictionary *)getAllParameterDict;

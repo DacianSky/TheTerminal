@@ -80,7 +80,7 @@ static TheTerminal *_instance;
         __executeCommand(self.cmdHistory[count]);
     }else if ([self havaParam:@"cmd"]) {
         // not record history parse cmd like @"thou://terminal?cmd=@[alert?title=ThisTitle&msg=ThisMsg]"
-        NSString *cmd = [self.params[@"cmd"] stringByDecodingURLFormat];
+        NSString *cmd = [self.params[@"cmd"] urldecode];
         __executeCommand(cmd);
         [self.cmdHistory removeLastObject];
     }

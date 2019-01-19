@@ -25,7 +25,7 @@
 - (void)execute
 {
     if (self.params[@"url"]) {
-        NSString *url = [self.params[@"url"] stringByDecodingURLFormat];
+        NSString *url = [self.params[@"url"] urldecode];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
         if ([UIViewController respondsToSelector:@selector(startViewController:)]) {
