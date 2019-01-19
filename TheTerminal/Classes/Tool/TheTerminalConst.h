@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define theTerminal_ [TheTerminal sharedTerminal]
+#define _theTerminal [TheTerminal sharedTerminal]
 
 // 执行命令
 void __executeCommand(NSString *cmd);

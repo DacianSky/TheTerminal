@@ -29,8 +29,8 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
         if ([UIViewController respondsToSelector:@selector(startViewController:)]) {
-            // TODO: 路由中记录历史
-            [UIViewController performSelector:@selector(startViewController:) withObject:url];
+            Intent *intent = [NSClassFromString(@"Intent") performSelector:@selector(intentWithRouteName:) withObject:url];
+            [UIViewController performSelector:@selector(startViewController:) withObject:intent];
 #pragma clang diagnostic pop
         }else{
             Class vc = NSClassFromString(url);
@@ -39,28 +39,7 @@
             }
         }
         
-    }else if (self.params[@"clearlog"]){
-        // clear logs
-    }else if (self.params[@"logs"]){
-        NSInteger count = [self.params[@"count"] integerValue];
-        if (!count) {
-            count = 10;
-        }
-        
-        [self showTerminalView:@[]];
     }
-}
-
-- (UIView *)buildTerminalView:(NSArray *)logs
-{
-    TheListView *listView = [[TheListView alloc] initWithFrame:[self suggestFrame]];
-    listView.tag = [self terminalTag];
-    listView.dataSources = logs;
-    return listView;
-}
-- (NSInteger)terminalTag
-{
-    return kTheLisgViewTag;
 }
 
 + (__kindof UINavigationController *)getAppCurrentNavigation

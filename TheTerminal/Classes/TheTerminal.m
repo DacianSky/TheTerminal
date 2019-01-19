@@ -17,7 +17,7 @@ void __executeCommand(NSString *cmd)
         cmd = nsstrformatcat(@"%@://%@", kTheMeScheme,cmd);
     }
     TheLog(@"command: %@",cmd);
-    [theTerminal_ fire:cmd];
+    [_theTerminal consume:cmd];
 }
 
 void __executeCommandOnly(NSString *cmd)
@@ -87,27 +87,22 @@ static TheTerminal *_instance;
 }
 
 #pragma mark - execute
-- (void)fire:(NSString *)cmd
+- (void)consume:(NSString *)cmd
 {
-    TheCommand *thecmd = [self couldParse:cmd];
-    [self parse:thecmd];
+    TheCommand *thecmd = [self parse:cmd];
+    if (!thecmd) {
+        return;
+    }
+    [thecmd execute];
     [self putHistory:thecmd.command];
 }
 
-- (TheCommand *)couldParse:(NSString *)cmd
+- (TheCommand *)parse:(NSString *)cmd
 {
     if (![cmd supportScheme:kTheMeScheme] && ![cmd isAppUrl]) {
         return nil;
     }
     return [[self class] findCommand:[[self class] specialHandle:cmd]];
-}
-
-- (void)parse:(TheCommand *)thecmd
-{
-    if (!thecmd) {
-        return;
-    }
-    [thecmd execute];
 }
 
 #pragma mark - tool
@@ -146,7 +141,7 @@ static TheTerminal *_instance;
 
 + (NSArray<NSString *> *)allCommands
 {
-    return theTerminal_.allCommands;
+    return _theTerminal.allCommands;
 }
 
 - (void)putHistory:(NSString *)history
