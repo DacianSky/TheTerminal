@@ -15,6 +15,7 @@ extern NSString *const kTheMeScheme;
 
 + (instancetype)sharedTerminal;
 
+- (TheCommand *)parse:(NSString *)cmd;
 - (void)consume:(NSString *)cmd;
 
 @end
