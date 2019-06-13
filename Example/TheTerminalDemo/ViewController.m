@@ -23,6 +23,9 @@
     self.view.backgroundColor = [UIColor cyanColor];
     [self.view addSubview:self.searchBar];
     self.searchBar.frame = CGRectMake(30, 100, self.view.bounds.size.width * 0.7, 44);
+    
+    TheLog(@"%@%d",@"format-",1234523456);
+    TheLogFormat(@"FormatType",2,@"%@%d",@"hello-",12345);
 }
 
 - (UITextField *)searchBar

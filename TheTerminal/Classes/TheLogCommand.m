@@ -233,17 +233,85 @@ void enableTheLog(BOOL flag)
     theTerminalCouldLog = flag;
 }
 
-void TheLog(NSString *format, ...)
+BOOL printCheck()
 {
 #ifdef DEBUG
     BOOL printFlag = theTerminalCouldLog;
 #else
     BOOL printFlag = theTerminalLogFlag>0 && theTerminalCouldLog;
 #endif
-    if (printFlag) {
-        va_list args;
-        va_start (args, format);
-        NSLogv(format,args);
-        va_end (args);
+    return printFlag;
+}
+
+
+NSString *theDefaultLogType = @"TheLog";
+void setupDefaultLogType(NSString *type)
+{
+    if (!type) {
+        return;
     }
+    theDefaultLogType = type;
+}
+
+void TheLog(NSString *format, ...)
+{
+    va_list args;
+    va_start (args, format);
+    NSString *log = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end (args);
+    TheLogFormat(nil, TheLogLevelVerbose, log,nil);
+}
+
+void TheLogWarn(NSString *format, ...)
+{
+    va_list args;
+    va_start (args, format);
+    NSString *log = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end (args);
+    TheLogFormat(nil, TheLogLevelWarn, log,nil);
+}
+
+void TheLogError(NSString *format, ...)
+{
+    va_list args;
+    va_start (args, format);
+    NSString *log = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end (args);
+    TheLogFormat(nil, TheLogLevelError, log,nil);
+}
+
+void TheLogImportant(NSString *format, ...)
+{
+    va_list args;
+    va_start (args, format);
+    NSString *log = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end (args);
+    TheLogFormat(nil, TheLogLevelImportant, log,nil);
+}
+
+void TheLogTemp(NSString *format, ...)
+{
+    va_list args;
+    va_start (args, format);
+    NSString *log = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end (args);
+    TheLogFormat(nil, TheLogLevelTemp, log,nil);
+}
+
+void TheLogFormat(NSString * _Nullable type,int level,NSString *format, ...)
+{
+    if (level < 0) {
+        return;
+    }
+    if (!printCheck()) {
+        return;
+    }
+    if (!type) {
+        type = theDefaultLogType;
+    }
+    va_list args;
+    va_start (args, format);
+    NSString *log = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end (args);
+    NSLog(@"%@::%d::%@",type,level,log);
 }
