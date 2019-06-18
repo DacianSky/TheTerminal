@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TheTerminal'
-  s.version          = '0.9.0'
+  s.version          = '0.9.1'
   s.summary          = '手机端命令辅助调试工具.提供发包后查看调试应用。'
 
 # This description is used to generate tags and improve search results.
